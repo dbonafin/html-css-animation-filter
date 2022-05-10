@@ -116,10 +116,49 @@
 
 .ex-10-icon {
     font-size: 60px;
+    animation-name: ex-10-icon;
+    animation: ex-10-icon 1s linear infinite;
 }
+
+@keyframes ex-10-icon {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/* solution ex 10 */
+
 .ex-11-icon {
     font-size: 60px;
 }
+
+.ex-11-icon:hover {
+    animation-name: ex-11-icon;
+    animation: ex-11-icon 2s ease-out;
+}
+
+@keyframes ex-11-icon {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(290deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* solution ex 11 */
+
+
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -141,6 +180,64 @@
     width: 60px;
     height: 20px;
 }
+
+.ex-12-button:hover .ex-12-top-white  {
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+    animation: ex-12-top-white 2s linear;
+}
+
+@keyframes ex-12-top-white {
+    0% {
+        top: -10px;
+        left: 10%;
+    }
+
+    50% {
+        top: -10px;
+        left: 68%;
+    }
+
+    100% {
+        top: -10px;
+        left: 10%;
+    }
+}
+
+@keyframes ex-12-bottom-white {
+
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+
+    50% {
+        bottom: -10px;
+        right: 68%;
+    }
+
+    100% {
+        bottom: -10px;
+        right: 20%;
+    }
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    position: absolute;
+    bottom: -10px;
+    right: 20%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+    animation: ex-12-bottom-white 2s linear;
+}
+
+/* solution ex 12 */
+
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
@@ -148,4 +245,76 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+}
+
+.ex-13-button:hover .ex-13-top-white {
+    animation: ex-13-top-white 2.5s linear;
+}
+
+@keyframes ex-13-top-white {
+    0% {
+        top: -10px;
+        left: 10%;
+    }
+
+    25% {
+        top: -10px;
+        left: 85%;
+    }
+
+    50% {
+        top: 55px;
+        left: 85%;
+    }
+
+    75% {
+        top: 55px;
+        left: -10%;
+    }
+
+    90% {
+        top: -10px;
+        left: -10%;
+    }
+
+    100% {
+        top: -10px;
+        left: 10%;
+    }
+}
+
+.ex-13-button:hover .ex-13-bottom-white  {
+    animation: ex-13-bottom-white 2.5s linear;
+}
+
+@keyframes ex-13-bottom-white {
+    0% {
+        bottom: -10px;
+        right: 10%;
+    }
+
+    25% {
+        bottom: -10px;
+        right: 74%;
+    }
+
+    50% {
+        bottom: 55px;
+        right: 74%;
+    }
+
+    75% {
+        bottom: 55px;
+        right: -10%;
+    }
+
+    90% {
+        bottom: -10px;
+        right: -10%;
+    }
+
+    100% {
+        bottom: -10px;
+        right: 10%;
+    }
 }
